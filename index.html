@@ -1,25 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bc92_baitap_5</title>
 </head>
+
 <body>
+
+    <div class="flex flex-wrap">
+        <div>
+            <h2>Tính Tiền Điện</h2>
+            <input class="input100" type="text" id="nameCus" name="name" placeholder="Nhập tên" />
+            <input class="input100" type="number" id="numberKw" placeholder="Nhập số Kw" />
+            <button type="button" onclick="onCalculateElec()">
+                TÍNH TIỀN ĐIỆN
+            </button>
+            <p id="pInfo_1"></p>
+
+        </div>
+
+<hr/>
+
+<div>
+    <h2>Tinh Thue Thu Nhap Ca Nhan</h2>
     
+    <input id="nameCaNhan" type="text" placeholder="Nhap Ten Ca Nhan">
+    <input id="totalThuNhap" type="number" placeholder="Nhap Tong Thu Nhap">
+    <input id="totalNguoiPhuThuoc" type="number" placeholder="Nhap So Nguoi Phu Thuoc">
 
+    <button type="button" onclick="tienThuePhaiTra()">Tien Thue Phai Tra</button>
+    <p id="pInfo_2"></p>
+</div>
 
+<hr/>
 
+<h2>Quan Ly Tuyen Sinh </h2>
+<input id="diemChuan" type="number" placeholder="diemChuan">
+<input id="khuVuc" type="text" placeholder="Khu Vuc">
+<input id="doiTuong" type="number" placeholder="Doi Tuong">
+<input id="diemMon_1" type="number" placeholder="Diem Mon1">
+<input id="diemMon_2" type="number" placeholder="Diem Mon2">
+<input id="diemMon_3" type="number" placeholder="Diem Mon3">
+<button type="button" onclick="ketQua()">Ket Qua</button>
+<p id="pInfo_3"></p>
 
+<hr/>
 
-
-
-
-
-
-
-
+<div class="container" style="padding: 20px; max-width: 400px;">
+    <h2>Tính Hóa Đơn Tiền Cáp</h2>
     
-    <script src="./main.js"></script>
+    <div style="margin-bottom: 10px;">
+        <label>Loại khách hàng:</label>
+        <select id="loaiKhachHang" onchange="toggleKetNoi()">
+            <option value="">-- Chọn loại khách hàng --</option>
+            <option value="nhaDan">Nhà dân</option>
+            <option value="doanhNghiep">Doanh nghiệp</option>
+        </select>
+    </div>
+
+    <input type="text" id="maKhachHang" placeholder="Nhập mã khách hàng" style="display:block; margin-bottom: 10px; width: 100%;">
+
+    <input type="number" id="soKetNoi" placeholder="Số kết nối" disabled style="display:block; margin-bottom: 10px; width: 100%; background-color: #f0f0f0;">
+
+    <input type="number" id="soKenhCaoCap" placeholder="Số kênh cao cấp" style="display:block; margin-bottom: 10px; width: 100%;">
+
+    <button type="button" onclick="tinhTienCap()" style="padding: 10px 20px; cursor: pointer;">Tính Tiền Cáp</button>
+
+    <p id="ketQuaCap" style="margin-top: 15px; font-weight: bold; color: blue;"></p>
+</div>
+
+
+
+
+
+
+
+
+
+
+<script src="./main.js"></script>
 </body>
+
 </html>
